@@ -40,7 +40,18 @@ namespace LabPart2
                         var dayDiff = subtractDates.Days;
                         var hoursDiff = dayDiff * 24;
                         var minDiff = hoursDiff * 60;
-                        Console.WriteLine("The difference between the two dates is {0} days = {1} hours = {2} minutes.", dayDiff, hoursDiff, minDiff);
+                if (dayDiff < 0 && hoursDiff < 0 && minDiff < 0)
+                {
+                    dayDiff = (-1) * dayDiff;
+                    hoursDiff = (-1) * hoursDiff;
+                    minDiff = (-1) * minDiff;
+                    Console.WriteLine("The difference between the two dates is {0} days = {1} hours = {2} minutes.", dayDiff, hoursDiff, minDiff);
+
+                }
+                else
+                { 
+                    Console.WriteLine("The difference between the two dates is {0} days = {1} hours = {2} minutes.", dayDiff, hoursDiff, minDiff);
+                }
                 }
                 
         
